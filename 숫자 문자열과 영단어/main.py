@@ -17,9 +17,9 @@ def solution_1(s):
     answer = []
     num_stack = []
     for char in s:
-        try:
+        if char.isnumeric():
             answer.append(str(int(char)))
-        except ValueError:
+        else:
             num_stack.append(char)
             if len(num_stack) >= 3:
                 try:
