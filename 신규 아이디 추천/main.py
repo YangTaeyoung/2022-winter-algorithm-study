@@ -37,10 +37,9 @@ def step_6(new_id: str):
 
 def step_7(new_id: str):
     result = list(new_id)
-    if len(new_id) <= 2:
-        last_char = new_id[len(new_id) - 1]
-        while len(result) != 3:
-            result.append(last_char)
+    last_char = new_id[len(new_id) - 1]
+    while len(result) != 3:
+        result.append(last_char)
     return ''.join(result)
 
 
