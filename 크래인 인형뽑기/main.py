@@ -1,5 +1,7 @@
+# 프로그래머스 - 크래인 인형뽑기 게임 문제 풀이
+# https://programmers.co.kr/learn/courses/30/lessons/64061
 def solution(board: list, moves: list):
-    # 바구니에 담겨있는 인형들
+    # 바구니에 담겨있는 인형 스텍
     bucket_stack = []
     # 사라진 인형 개수를 담는 변수
     answer = 0
