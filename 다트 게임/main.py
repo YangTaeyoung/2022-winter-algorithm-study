@@ -22,6 +22,6 @@ def solution(dartResult: str):
         else:
             current_num = operator_dict[ch](current_num)
             if ch == '*':
-                answer[len(answer) - 1] = operator_dict[ch](answer[len(answer) - 1])
+                answer[-1] = operator_dict[ch](answer[-1])
         i += 1
     return sum(answer)
