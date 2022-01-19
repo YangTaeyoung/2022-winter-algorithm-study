@@ -47,6 +47,7 @@ def process(p):
     # Step 1
     if len(p) == 0:
         return p
+
     # Step 2
     u, v = divide_uv(p)
 
@@ -54,6 +55,7 @@ def process(p):
     if is_balanced(u):
         # Step 3-1
         return u + process(v)
+
     # Step 4
     else:
         # Step 4-1      4-2       4-3         4-4
