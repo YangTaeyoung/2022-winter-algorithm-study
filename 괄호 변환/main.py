@@ -1,5 +1,6 @@
 # 프로그래머스 - 괄호 변환 문제
 # https://programmers.co.kr/learn/courses/30/lessons/60058
+# 주어진 알고리즘대로 풀었던 문제라 생각보다 난이도가 쉬웠다.
 
 # 괄호 문자를 뒤집는 함수
 def reverse_ch(ch):
