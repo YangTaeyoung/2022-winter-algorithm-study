@@ -9,6 +9,7 @@ def reverse_ch(ch):
         return "("
 
 
+# 괄호 문자열을 뒤집는 함수
 def reverse_p(p: str):
     reversed_p = list()
     for ch in p:
