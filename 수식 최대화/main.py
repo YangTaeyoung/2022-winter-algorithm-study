@@ -44,14 +44,12 @@ def solution(expression):
 
 # 극한의 리스트 컴프리헨션 버전
 def solution_2(expression):
-    expression = re.split('([-|+|*])', expression)
-    oper_list = ["*", "-", "+"]
     return max(
         [
-            abs(int(calculate_1oper(calculate_1oper(calculate_1oper(expression.copy(), oper1), oper2), oper3)[0]))
-            for oper1 in oper_list
-            for oper2 in oper_list
-            for oper3 in oper_list
+            abs(int(calculate_1oper(calculate_1oper(calculate_1oper(re.split('([-|+|*])', expression).copy(), oper1), oper2), oper3)[0]))
+            for oper1 in "*+-"
+            for oper2 in "*+-"
+            for oper3 in "*+-"
             if oper1 != oper2 and oper2 != oper3 and oper1 != oper3
         ]
     )
