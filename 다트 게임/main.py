@@ -10,9 +10,6 @@ def solution(dartResult: str):
     answer = []
     i = 0
     while i <= len(dartResult):
-        if i == len(dartResult):
-            answer.append(current_num)
-            break
         elif (ch := dartResult[i]).isnumeric():
             answer.append(current_num)
             if (ch2 := dartResult[i:i + 2]).isnumeric():
@@ -22,6 +19,7 @@ def solution(dartResult: str):
         else:
             current_num = operator_dict[ch](current_num)
             if ch == '*':
-                answer[len(answer) - 1] = operator_dict[ch](answer[len(answer) - 1])
+                answer[-1] = operator_dict[ch](answer[-1])
         i += 1
+    answer.append(current_num)
     return sum(answer)
