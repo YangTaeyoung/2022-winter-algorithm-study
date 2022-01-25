@@ -5,6 +5,8 @@
 from itertools import combinations
 
 
+# col_combi(이후 순회를 돌 컬럼 조합 리스트) 중 candidate_set(후보키로 지정된 조합)이 포함되어 있으면 해당 요소를 제거하는 함수
+# {1,2}를 돌 차례인데 이미 {1}이 후보키에 있다면 1이 포함된 {1,2} 제거
 def delete_contained(col_combi: list, candidate_set: tuple):
     i = 0
     while i < len(col_combi):
