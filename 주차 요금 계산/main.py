@@ -27,7 +27,6 @@ def get_fee(time_as_minute: int, fees):
 
 def solution(fees, records):
     infos = {}
-    result_dict = {}
     # 레코드 분류 (1차): infos[차량번호] = [출발시각1, 도착시각1, 출발2, 도착2 ...]
     for record in records:
         # 문자열을 쪼갬
@@ -38,8 +37,7 @@ def solution(fees, records):
             infos[record_splited[1]] = list()
             infos[record_splited[1]].append(record_splited[0])
     # 레코드 분류 (2차): result_dict[차량 번호]: 총 주차시간
-    for car_num in infos:
-        result_dict[car_num] = get_time_as_minute(infos[car_num])
+    result_dict = {car_num: get_time_as_minute(infos[car_num]) for car_num in infos.keys()}
     return [get_fee(result_dict[car_num], fees) for car_num in sorted(result_dict.keys())]
 
 
