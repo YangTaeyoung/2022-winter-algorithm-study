@@ -1,3 +1,6 @@
+# 프로그래머스 - 양궁대회
+# https://programmers.co.kr/learn/courses/30/lessons/92342
+# 이번건 좀 어려웠다
 candidates = list()
 
 def is_finish(node_idx: int, rest_n: int, apeachs):
