@@ -3,13 +3,16 @@
 # 이번건 좀 어려웠다
 candidates = list()
 
+
 def is_finish(node_idx: int, rest_n: int, apeachs):
     if rest_n > 0:
-        for i in range(node_idx+1, 11):
+        for i in range(node_idx + 1, 11):
             if apeachs[i] <= rest_n:
                 return False
         return True
     return False
+
+
 def dfs(node_idx, apeachs, lions, rest_n, visited):
     visited_copied = visited.copy()
     visited_copied[node_idx] = True
@@ -56,9 +59,8 @@ def solution(n: int, info: list):
         visited = [False] * 11
         dfs(i, info, lions, n, visited)
     if candidates:
-        candidates.sort(reverse= True, key=lambda x: x[0][::-1])
+        candidates.sort(reverse=True, key=lambda x: x[0][::-1])
 
         return max(candidates, key=lambda x: x[1])[0]
     else:
         return [-1]
-
